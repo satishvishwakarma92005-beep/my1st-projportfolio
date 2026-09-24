@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Satish Vishwakarma | Portfolio</title>
+
+    <!-- ================= CSS ================= -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0b0a;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(13, 11, 10, 0.9);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #c47a52;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul a:hover {
+            color: #c47a52;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1100px;
+            margin: auto;
+            padding: 140px 20px 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .small {
+            color: #c47a52;
+            letter-spacing: 4px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #c47a52;
+        }
+
+        .hero h2 {
+            color: #d0c0b8;
+            font-weight: normal;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin-top: 20px;
+            line-height: 1.7;
+            color: #aaa;
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-right: 10px;
+
+            background: #c47a52;
+            color: white;
+            text-decoration: none;
+
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #a85e3a;
+        }
+
+        .outline {
+            background: transparent;
+            border: 1px solid #c47a52;
+        }
+
+
+        /* SOCIAL */
+
+        .social {
+            margin-top: 25px;
+        }
+
+        .social a {
+            color: #aaa;
+            margin-right: 18px;
+            text-decoration: none;
+        }
+
+        .social a:hover {
+            color: #c47a52;
+        }
+
+
+        /* PROFILE CARD */
+
+        .profile-card {
+            width: 320px;
+            height: 350px;
+
+            border: 1px solid #4d3327;
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background: #17110e;
+
+            animation: floating 4s infinite ease-in-out;
+        }
+
+        .circle img {
+            width: 200px;
+            height: 200px;
+            object-fit:cover;
+            border-radius: 50%;
+
+            
+        }
+
+        .profile-card h3 {
+            margin-top: 25px;
+        }
+
+        .profile-card p {
+            color: #999;
+            margin-top: 8px;
+        }
+
+
+        /* SECTIONS */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .title {
+            color: #c47a52;
+            letter-spacing: 4px;
+            font-size: 13px;
+        }
+
+        section h2 {
+            font-size: 38px;
+            margin: 15px 0 25px;
+        }
+
+        .about {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #aaa;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 30px 20px;
+            background: #17110e;
+            border: 1px solid #34231c;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+            border-color: #c47a52;
+        }
+
+        .skill h3 {
+            color: #c47a52;
+        }
+
+        .skill p {
+            color: #999;
+            margin-top: 10px;
+        }
+
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            text-align: left;
+            padding: 30px;
+
+            background: #17110e;
+            border: 1px solid #34231c;
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: #c47a52;
+        }
+
+        .project span {
+            color: #c47a52;
+        }
+
+        .project h3 {
+            margin: 20px 0 12px;
+        }
+
+        .project p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+
+        /* CONTACT */
+
+        .email {
+            color: #c47a52;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #2d211c;
+            text-align: center;
+            padding: 30px;
+            color: #777;
+        }
+
+
+        /* ANIMATION */
+
+        @keyframes floating {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .social {
+                text-align: center;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                width: 280px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                SATISH<span>.</span>
+            </div>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <div class="hero" id="home">
+
+        <div>
+
+            <div class="small">
+                HELLO, I'M
+            </div>
+
+            <h1>
+                Satish <span>Vishwakarma</span>
+            </h1>
+
+            <h2>
+                CSE Student & Web Developer
+            </h2>
+
+            <p>
+                I am a Computer Science student learning Web Development
+                and creating modern and attractive websites.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn">
+                    View Projects
+                </a>
+
+                <a href="resume.pdf" class="btn outline" download>
+                    Download Resume
+                </a>
+
+            </div>
+
+
+            <div class="social">
+
+                <a href="https://github.com/satishvishwakarma92005-beep"target="_blank">
+                    GitHub
+                </a>
+
+                <a href="https://www.linkedin.com/in/satish-vishwakarma-8628ba396/
+
+" target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="https://www.instagram.com/satiish.vishwakarma?stkn=djJ4c2RqMWtwd2xj" target="_blank">
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-card">
+            <div class="circle">
+          <img src="photo.jpg" alt="Satish Vishwakarma">
+
+            </div>
+
+            <h3>
+                Computer Science
+            </h3>
+
+            <p>
+                Student • Developer • Learner
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="title">
+            ABOUT ME
+        </div>
+
+        <h2>
+            Who I Am
+        </h2>
+
+        <p class="about">
+
+            I am a Computer Science Engineering student interested
+            in Full Stack Development. I enjoy learning HTML, CSS
+            and JavaScript and building useful web projects.
+
+        </p>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <div class="title">
+            MY SKILLS
+        </div>
+
+        <h2>
+            Technologies I Use
+        </h2>
+
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Design & Layout</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Web Interaction</p>
+            </div>
+
+            <div class="skill">
+                <h3>C++</h3>
+                <p>Programming</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="title">
+            MY WORK
+        </div>
+
+        <h2>
+            Recent Projects
+        </h2>
+
+
+        <div class="projects">
+
+            <div class="project">
+
+                <span>01</span>
+
+                <h3>
+                 🌐   Student Portfolio
+                </h3>
+
+                <p>
+                    Personal portfolio website created
+                    using HTML and CSS.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <span>02</span>
+
+                <h3>
+                 🍽️   Restaurant Menu website
+                </h3>
+
+                <p>
+             A simple and attractive restaurant menu website created using HTML and CSS           
+ 
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <span>03</span>
+
+                <h3>
+      🎓 Student Personal Profile Card 
+                  </h3>
+
+                <p>
+                    A clean and attractive personal profile card designed using HTML and CSS
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="title">
+            CONTACT
+        </div>
+
+        <h2>
+            Let's Connect
+        </h2>
+
+        <p>
+            Want to connect with me?
+        </p>
+
+        <br>
+
+        <a class="email"
+            href="mailto:satishvishwakarma92005@gmail.com">
+
+            satishvishwakarma92005@gmail.com
+
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Satish Vishwakarma
+        </p>
+
+        <p>
+            Built with HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        console.log("Satish Portfolio Loaded!");
+
+        const buttons = document.querySelectorAll(".btn");
+
+        buttons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                button.style.transform = "scale(0.95)";
+
+                setTimeout(function() {
+
+                    button.style.transform = "";
+
+                }, 150);
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+```
